@@ -5,3 +5,6 @@ spring-boot.iml
 
 /spring-boot-mvc/.mvn/
 /spring-boot-mvc/target/
+
+/spring-boot-jdbc/.mvn/
+/spring-boot-jdbc/target/
