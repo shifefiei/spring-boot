@@ -16,14 +16,11 @@ import java.util.Map;
 
 @Configurable
 public class DruidConfig {
-
     @Bean
     @ConfigurationProperties("spring.datasource.druid")
     public DataSource dataSourceTwo() {
         return DruidDataSourceBuilder.create().build();
     }
-
-    //配置Druid的监控
 
     /**
      * 配置一个管理后台的Servlet

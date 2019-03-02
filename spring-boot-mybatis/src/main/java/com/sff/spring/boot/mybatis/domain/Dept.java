@@ -1,6 +1,8 @@
 package com.sff.spring.boot.mybatis.domain;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 

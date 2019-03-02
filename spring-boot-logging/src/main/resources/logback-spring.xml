@@ -6,7 +6,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 -->
 <configuration scan="false" scanPeriod="60 seconds" debug="false">
     <!-- 定义日志的根目录 -->
-    <property name="LOG_HOME" value="/tmp/log" />
+    <property name="LOG_HOME" value="/tmp/log"/>
     <!-- 定义日志文件名称 -->
     <property name="appName" value="springboot"></property>
     <!-- ch.qos.logback.core.ConsoleAppender 表示控制台输出 -->
@@ -30,7 +30,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
         </layout>
     </appender>
 
-    <!-- 滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件 -->  
+    <!-- 滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件 -->
     <appender name="appLogAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 指定日志文件的名称 -->
         <file>${LOG_HOME}/${appName}.log</file>
@@ -57,7 +57,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
                 <maxFileSize>100MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
-        <!-- 日志输出格式： -->     
+        <!-- 日志输出格式： -->
         <layout class="ch.qos.logback.classic.PatternLayout">
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [ %thread ] - [ %-5level ] [ %logger{50} : %line ] - %msg%n</pattern>
         </layout>
@@ -72,18 +72,17 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 		表示当前logger的appender-ref和rootLogger的appender-ref都有效
     -->
     <!-- hibernate logger -->
-    <logger name="com.sff" level="debug" />
+    <logger name="com.sff" level="debug"/>
     <!-- Spring framework logger -->
     <logger name="org.springframework" level="debug" additivity="false"></logger>
 
 
-
-    <!-- 
+    <!--
     root与logger是父子关系，没有特别定义则默认为root，任何一个类只会和一个logger对应，
     要么是定义的logger，要么是root，判断的关键在于找到这个logger，然后判断这个logger的appender和level。 
     -->
     <root level="info">
-        <appender-ref ref="stdout" />
-        <appender-ref ref="appLogAppender" />
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="appLogAppender"/>
     </root>
 </configuration> 

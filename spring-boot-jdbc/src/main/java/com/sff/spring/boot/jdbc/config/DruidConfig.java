@@ -12,7 +12,7 @@ public class DruidConfig {
 
     @Bean
     @ConfigurationProperties("spring.datasource.druid")
-    public DataSource dataSourceTwo(){
+    public DataSource dataSourceTwo() {
         return DruidDataSourceBuilder.create().build();
     }
 }

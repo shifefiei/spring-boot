@@ -18,7 +18,6 @@ import java.util.Arrays;
 public class ApplicationConfig implements WebMvcConfigurer {
 
 
-
     /**
      * 利用 ServletListenerRegistrationBean 注册 listener
      *

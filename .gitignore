@@ -8,3 +8,6 @@ spring-boot.iml
 
 /spring-boot-jdbc/.mvn/
 /spring-boot-jdbc/target/
+/spring-boot-cache/.mvn/
+/spring-boot-cache/mvnw.cmd
+/spring-boot-cache/mvnw

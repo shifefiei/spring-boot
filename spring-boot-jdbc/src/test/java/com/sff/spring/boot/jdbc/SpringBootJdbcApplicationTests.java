@@ -15,6 +15,7 @@ import java.sql.SQLException;
 public class SpringBootJdbcApplicationTests {
     @Autowired
     private DataSource dataSource;
+
     @Test
     public void testDataSource() throws SQLException {
 
