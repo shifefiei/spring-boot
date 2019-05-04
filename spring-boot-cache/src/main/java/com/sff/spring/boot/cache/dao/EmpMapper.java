@@ -2,6 +2,7 @@ package com.sff.spring.boot.cache.dao;
 
 
 import com.sff.spring.boot.cache.domain.Emp;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 public interface EmpMapper {

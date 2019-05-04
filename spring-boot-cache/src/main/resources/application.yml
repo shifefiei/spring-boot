@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://127.0.0.1:3306/sff_test
+    url: jdbc:mysql://127.0.0.1:3306/sff_test_01
     driver-class-name: com.mysql.jdbc.Driver
     # 指定自己使用的数据源
     type: com.alibaba.druid.pool.DruidDataSource
@@ -28,7 +28,12 @@ spring:
        log-slow-sql: true
       wall:
        enabled: true
+
+  redis:
+    host: 127.0.0.1
+
 # 让特定的包路径打印debug日志
 logging:
   level:
     com.sff.spring.boot.cache.dao: debug
+
