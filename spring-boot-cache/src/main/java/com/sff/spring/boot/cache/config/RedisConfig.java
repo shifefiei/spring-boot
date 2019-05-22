@@ -8,6 +8,8 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.scheduling.TaskScheduler;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 
 import java.net.UnknownHostException;
 
@@ -25,5 +27,15 @@ public class RedisConfig {
         //设置value的序列化方式
         template.setValueSerializer(jsonRedisSerializer);
         return template;
+    }
+
+
+   // @Bean
+    public TaskScheduler taskScheduler() {
+        ThreadPoolTaskScheduler taskScheduler = new ThreadPoolTaskScheduler();
+        taskScheduler.setPoolSize(10);
+        taskScheduler.setThreadNamePrefix("demo-task");
+        taskScheduler.setThreadGroupName("aa");
+        return taskScheduler;
     }
 }

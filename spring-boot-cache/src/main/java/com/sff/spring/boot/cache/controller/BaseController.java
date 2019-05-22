@@ -4,6 +4,7 @@ import com.sff.spring.boot.cache.domain.Dept;
 import com.sff.spring.boot.cache.domain.Emp;
 import com.sff.spring.boot.cache.service.DeptService;
 import com.sff.spring.boot.cache.service.EmpService;
+import com.sff.spring.boot.cache.task.AsyncService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,8 @@ public class BaseController {
     private EmpService empService;
     @Autowired
     private DeptService deptService;
+    @Autowired
+    private AsyncService asyncService;
 
     @GetMapping("/query/emp/{id}")
     public Emp query(@PathVariable Integer id) {
@@ -27,4 +30,9 @@ public class BaseController {
         return deptService.queryDept(id);
     }
 
+    @GetMapping("/async")
+    public String async() {
+        asyncService.async();
+        return "success";
+    }
 }

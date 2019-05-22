@@ -1,4 +1,13 @@
 spring:
+  mail:
+    username: bbb@qq.com
+    password: cybdkhhmcqclbfac  #qq邮箱授权码，qq账户设置里发短信获取
+    host: smtp.qq.com
+    properties:
+      mail.smtp.ssl.enable: true
+
+
+
   datasource:
     username: root
     password: root
@@ -36,4 +45,5 @@ spring:
 logging:
   level:
     com.sff.spring.boot.cache.dao: debug
+    org.springframework.scheduling: debug
 
